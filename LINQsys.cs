@@ -31,12 +31,12 @@ namespace CS_LINQ
 
         public IEnumerable<int> findEven()
         {
-            return _arr.Where(p => p % 2 == 0).ToArray().OrderBy(i => i); ;
+            return _arr.Where(p => p % 2 == 0).OrderBy(i => i);
         }
 
         public IEnumerable<int> findOdd()
         {
-            return _arr.Where(p => p % 2 != 0).ToArray().OrderBy(i => i); ;
+            return _arr.Where(p => p % 2 != 0).OrderBy(i => i);
         }
 
         public IEnumerable<int> findSumFLEqSix()
@@ -52,7 +52,7 @@ namespace CS_LINQ
                     n /= 10;
                 }
                 return (first + last == 6)?true:false;
-            }).ToArray().OrderBy(i => i); ;
+            }).OrderBy(i => i);
         }
 
         public IEnumerable<int> findSixSix()
@@ -61,7 +61,7 @@ namespace CS_LINQ
             {
                 string str = p.ToString();
                 return (str.Contains("666")) ? true : false;
-            }).ToArray().OrderBy(i => i);
+            }).OrderBy(i => i);
         }
 
         public ParallelQuery<int> findEvenAsParallel()
@@ -87,7 +87,7 @@ namespace CS_LINQ
                     n /= 10;
                 }
                 return (first + last == 6) ? true : false;
-            }).OrderBy(i => i); ;
+            }).OrderBy(i => i);
         }
 
         public ParallelQuery<int> findSixSixAsParallel()
@@ -96,7 +96,7 @@ namespace CS_LINQ
             {
                 string str = p.ToString();
                 return (str.Contains("666")) ? true : false;
-            }).OrderBy(i => i); ;
+            }).OrderBy(i => i);
         }
     }
 }
