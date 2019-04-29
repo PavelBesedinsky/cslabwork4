@@ -64,17 +64,17 @@ namespace CS_LINQ
             }).ToArray().OrderBy(i => i);
         }
 
-        public IEnumerable<int> findEvenAsParallel()
+        public ParallelQuery<int> findEvenAsParallel()
         {
-            return _arr.AsParallel().Where(p => p % 2 == 0).ToArray().OrderBy(i => i); ;
+            return _arr.AsParallel().Where(p => p % 2 == 0).OrderBy(i => i);
         }
 
-        public IEnumerable<int> findOddAsParallel()
+        public ParallelQuery<int> findOddAsParallel()
         {
-            return _arr.AsParallel().Where(p => p % 2 != 0).ToArray().OrderBy(i => i); ;
+            return _arr.AsParallel().Where(p => p % 2 != 0).OrderBy(i => i);
         }
 
-        public IEnumerable<int> findSumFLEqSixAsParallel()
+        public ParallelQuery<int> findSumFLEqSixAsParallel()
         {
             return _arr.AsParallel().Where(p =>
             {
@@ -87,16 +87,16 @@ namespace CS_LINQ
                     n /= 10;
                 }
                 return (first + last == 6) ? true : false;
-            }).ToArray().OrderBy(i => i); ;
+            }).OrderBy(i => i); ;
         }
 
-        public IEnumerable<int> findSixSixAsParallel()
+        public ParallelQuery<int> findSixSixAsParallel()
         {
             return _arr.AsParallel().Where(p =>
             {
                 string str = p.ToString();
                 return (str.Contains("666")) ? true : false;
-            }).ToArray().OrderBy(i => i); ;
+            }).OrderBy(i => i); ;
         }
     }
 }

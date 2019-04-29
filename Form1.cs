@@ -129,7 +129,7 @@ namespace CS_LINQ
         /// </summary>
         private void getEvenAsParallel()
         {
-            IEnumerable<int> answer = default(IEnumerable<int>);
+            ParallelQuery<int> answer = default(ParallelQuery<int>);
             try
             {
                 answer = exp.findEvenAsParallel();
@@ -221,6 +221,22 @@ namespace CS_LINQ
             _rtbT.AppendText("\nВремя " + restime.ToString() + "\n");
         }
 
+        private void outEnumerable(ParallelQuery<int> sequence, string name)
+        {
+            _rtbT.AppendText(name + ": ");
+            Stopwatch time = new Stopwatch();
+
+            time.Start();
+            foreach (int num in sequence)
+            {
+                if (_cbOut.Checked)
+                    _rtbT.AppendText(num + "  ");
+            }
+            time.Stop();
+            double restime = time.Elapsed.TotalMilliseconds;
+            time.Reset();
+            _rtbT.AppendText("\nВремя " + restime.ToString() + "\n");
+        }
         private void _btnRand_Click(object sender, EventArgs e)
         {
 
@@ -235,7 +251,6 @@ namespace CS_LINQ
             getSumSix();
             getSixSix();
         }
-
         private void _btnTest_Click(object sender, EventArgs e)
         {
             exp = new LINQsys(8, (int[] array) =>
