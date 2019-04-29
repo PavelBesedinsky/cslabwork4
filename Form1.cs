@@ -147,7 +147,7 @@ namespace CS_LINQ
 
         private void getOddAsParallel()
         {
-            IEnumerable<int> answer = default(IEnumerable<int>);
+            ParallelQuery<int> answer = default(ParallelQuery<int>);
             try
             {
                 answer = exp.findOddAsParallel();
@@ -165,7 +165,7 @@ namespace CS_LINQ
 
         private void getSumSixAsParallel()
         {
-            IEnumerable<int> answer = default(IEnumerable<int>);
+            ParallelQuery<int> answer = default(ParallelQuery<int>);
 
             try
             {
@@ -184,7 +184,7 @@ namespace CS_LINQ
 
         private void getSixSixAsParallel()
         {
-            IEnumerable<int> answer = default(IEnumerable<int>);
+            ParallelQuery<int> answer = default(ParallelQuery<int>);
             try
             {
                 answer = exp.findSixSixAsParallel();
