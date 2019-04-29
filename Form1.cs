@@ -250,6 +250,7 @@ namespace CS_LINQ
             getOdd();
             getSumSix();
             getSixSix();
+            _rtbT.AppendText("\n");
         }
         private void _btnTest_Click(object sender, EventArgs e)
         {
@@ -285,6 +286,7 @@ namespace CS_LINQ
             getOddAsParallel();
             getSumSixAsParallel();
             getSixSixAsParallel();
+            _rtbT.AppendText("\n");
         }
     }
 }

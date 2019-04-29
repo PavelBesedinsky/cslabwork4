@@ -84,6 +84,7 @@
             this._rtbT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this._rtbT.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this._rtbT.Location = new System.Drawing.Point(12, 15);
             this._rtbT.Name = "_rtbT";
             this._rtbT.Size = new System.Drawing.Size(567, 423);
